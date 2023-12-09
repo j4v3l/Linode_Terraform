@@ -4,7 +4,7 @@
 # }
 
 output "vps_instance_ip" {
-  value       = module.linode_vps.instance_ip
+  value       = module.linode_instance.instance_ip
   description = "The public IP address of the VPS instance."
 }
 
@@ -14,6 +14,6 @@ output "vps_instance_ip" {
 # }
 
 output "vps_instance_status" {
-  value       = module.linode_vps.instance_status
+  value       = module.linode_instance.instance_status
   description = "The status of the VPS instance."
 }

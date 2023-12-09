@@ -6,11 +6,11 @@ terraform {
     }
   }
 }
-
 resource "linode_instance" "vps" {
-  label  = var.label
-  image  = var.image
-  region = var.region
-  type   = var.type
-  authorized_keys = [var.ssh_key]
+
+  label           = var.label
+  image           = var.image
+  region          = var.region
+  type            = var.type
+  authorized_keys = [trimspace(file(pathexpand(var.ssh_key)))]
 }
