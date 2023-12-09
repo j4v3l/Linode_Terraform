@@ -1,0 +1,6 @@
+linode_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+vps_label    = "my-vps"
+vps_image    = "linode/ubuntu20.04"
+vps_region   = "us-east"
+vps_type     = "g6-nanode-1"
+vps_ssh_key  = "~/.ssh/id_rsa.pub"
