@@ -73,3 +73,19 @@ variable "volume_region" {
   description = "Region for the storage volume"
   type        = string
 }
+variable "enable_vps_module" {
+  description = "Set to true to enable the VPS module"
+  type        = bool
+  default     = true
+}
+
+variable "enable_dns_module" {
+  description = "Set to true to enable the DNS module"
+  type        = bool
+  default     = true
+}
+variable "enable_storage_module" {
+  description = "Set to true to enable the Storage module"
+  type        = bool
+  default     = true
+}

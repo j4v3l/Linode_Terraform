@@ -15,3 +15,7 @@ record_target = "example.com."
 volume_label  = "storage"
 volume_size   = 20 # Size of the volume in GB
 volume_region = "us-east"
+# Enable/Disable a module (true/false)
+enable_vps_module     = true
+enable_dns_module     = false
+enable_storage_module = true

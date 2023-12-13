@@ -88,3 +88,10 @@ Run the `terraform destroy` command to destroy the resources.
 ```terraform
 terraform destroy
 ```
+
+6. **Enable/Disable Modules:**
+```plaintext
+enable_vps_module     = true  # Set to false to disable the VPS module
+enable_dns_module     = false # Set to true to enable the DNS module
+enable_storage_module = true  # Set to false to disable the Storage module
+```

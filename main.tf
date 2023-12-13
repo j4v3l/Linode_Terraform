@@ -13,6 +13,7 @@ provider "linode" {
 
 module "linode_instance" {
   source  = "./modules/vps"
+  count   = var.enable_vps_module ? 1 : 0
   label   = var.vps_label
   image   = var.vps_image
   region  = var.vps_region # Example region
@@ -22,6 +23,7 @@ module "linode_instance" {
 
 module "dns_config" {
   source        = "./modules/dns"
+  count         = var.enable_dns_module ? 1 : 0
   domain        = var.domain
   soa_email     = var.soa_email
   tags          = var.tags
@@ -32,8 +34,9 @@ module "dns_config" {
 
 module "storage" {
   source             = "./modules/storage"
+  count              = var.enable_storage_module ? 1 : 0
   volume_label       = var.volume_label
   volume_size        = var.volume_size
   region             = var.volume_region
-  linode_instance_id = module.linode_instance.instance_id
+  linode_instance_id = length(module.linode_instance) > 0 ? module.linode_instance[0].instance_id : 0
 }
