@@ -22,35 +22,25 @@ This Terraform project automates the deployment of VPS instances on Linode. It a
 ## Project Structure
 
 ```plaintext
-
 📁 Linode_Terraform
-
 ├── 📁 modules
-
-│ ├── 📁 vps
-
-│ │ ├── 📄 main.tf
-
-│ │ ├── 📄 variables.tf
-
-│ │ └── 📄 outputs.tf
-
+│   ├── 📁 vps
+│   │   ├── 📄 main.tf
+│   │   ├── 📄 variables.tf
+│   │   └── 📄 outputs.tf
+│   ├── 📁 dns
+│   │   ├── 📄 main.tf
+│   │   ├── 📄 variables.tf
+│   │   └── 📄 outputs.tf
+│   └── 📁 storage
+│       ├── 📄 main.tf
+│       ├── 📄 variables.tf
+│       └── 📄 outputs.tf
 ├── 📄 main.tf
-
 ├── 📄 variables.tf
-
 ├── 📄 terraform.tfvars
-
 ├── 📄 outputs.tf
-
-├── 📄 terraform_init.sh (optional)
-
-├── 📄 terraform_apply.sh (optional)
-
-├── 📄 terraform_destroy.sh (optional)
-
 └── 📄 README.md
-
 ```
 
 # How to Run the Terraform Project
