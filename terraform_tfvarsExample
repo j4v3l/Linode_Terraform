@@ -4,3 +4,14 @@ vps_image    = "linode/ubuntu20.04"
 vps_region   = "us-east"
 vps_type     = "g6-nanode-1"
 vps_ssh_key  = "~/.ssh/id_rsa.pub"
+# DNS Variables
+domain        = "example.com"
+soa_email     = "admin@example.com"
+tags          = ["example", "terraform"]
+record_name   = "www"
+record_type   = "A"
+record_target = "example.com."
+# Storage Variables
+volume_label  = "storage"
+volume_size   = 20 # Size of the volume in GB
+volume_region = "us-east"
